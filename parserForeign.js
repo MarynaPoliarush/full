@@ -14,7 +14,7 @@ async function getForeign (){
        
     const browser = await puppeteer.launch({"headless": 'new',"args": ["--fast-start", "--disable-extensions", "--no-sandbox"], 'ignoreDefaultArgs': [ '--enable-automation'] })
     const newPage = await browser.newPage();
-    await newPage.goto('https://tradingeconomics.com/currencies')
+    await newPage.goto('https://tradingeconomics.com/currencies',{timeout: 0})
 
    
         let allNums = await newPage.evaluate( ()=>{
