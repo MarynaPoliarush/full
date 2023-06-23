@@ -7,7 +7,7 @@ async function getForeign (){
     let foreign={
        rates:'',
        daily:'',
-       weekly:''
+       weekly:'',
     }
 
     try{
@@ -21,7 +21,7 @@ async function getForeign (){
             const nums = Array.from(document.querySelectorAll(' #p '), e => e.innerText)
             return nums
         })
-        foreign.rates=allNums.slice(27,40)
+        foreign.rates = allNums.slice(27,32)
 
         
 
@@ -29,9 +29,9 @@ async function getForeign (){
             const nums = Array.from(document.querySelectorAll('#pch'), e => e.innerText)
             return nums
         })
-        console.log(allday)
+        // console.log(allday)
 
-        foreign.daily = allday.slice(27,40)
+        foreign.daily = allday.slice(27,32)
 
 
 
@@ -40,9 +40,9 @@ async function getForeign (){
            
             return nums
         })
-        foreign.weekly = allweek.slice(81,120)
+        foreign.weekly = allweek.slice(81,96)
     
-        // console.log(foreign)
+        console.log(foreign)
 
     await browser.close()
 
