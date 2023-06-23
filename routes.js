@@ -50,7 +50,6 @@ router.get('/uahrates', async (req,res)=>{
 })
 
 
-
 router.get('/foreignrates', async (req,res)=>{
     console.log('request got TRY RUB')
 
@@ -67,14 +66,20 @@ router.get('/foreignrates', async (req,res)=>{
     foreign.TRY.push( Number(fetchedTRY.rates[4]).toFixed(2) )
     foreign.TRY.push( fetchedTRY.daily[4] )
     foreign.TRY.push(fetchedTRY.weekly[12] ) 
+    foreign.TRY.push(fetchedTRY.weekly[13] ) 
+    foreign.TRY.push(fetchedTRY.weekly[14] ) 
 
     foreign.RUB.push( Number(fetchedTRY.rates[3]).toFixed(2) )
     foreign.RUB.push( fetchedTRY.daily[3] )
     foreign.RUB.push( fetchedTRY.weekly[9] ) 
+    foreign.RUB.push( fetchedTRY.weekly[10] ) 
+    foreign.RUB.push( fetchedTRY.weekly[11] ) 
 
     foreign.EUR.push( Number(fetchedTRY.rates[0]).toFixed(2) )
     foreign.EUR.push( fetchedTRY.daily[0] )
     foreign.EUR.push( fetchedTRY.weekly[0] ) 
+    foreign.EUR.push( fetchedTRY.weekly[1] ) 
+    foreign.EUR.push( fetchedTRY.weekly[2] ) 
 
    
 
