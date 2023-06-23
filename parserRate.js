@@ -1,5 +1,5 @@
 console.log("hello rates");
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
 
 
 
